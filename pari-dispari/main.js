@@ -12,17 +12,28 @@ console.log(`inserito: ${even_or_odd}`);
 const user_number = parseInt(prompt('inserire un numero da 1 a 5'));
 console.log(`inserito: ${user_number}`);
 // funzione per numero random
+/**
+ * ### generate rnd number min <= N <= max
+ * @param {number} min - min number
+ * @param {number} max - max number
+ * @returns number
+ */
 function getRndNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
-// assgno un numero al computer
+// assegno un numero al computer
 const pc_number = getRndNumber(1, 5);
 console.log(`numero pc: ${pc_number}`);
 // sommo i due numeri
 const somma = user_number + pc_number;
 
 // funzione pari o dispari
+/**
+ * ### check if the number is even
+ * @param {number} number 
+ * @returns true/false
+ */
 function isEven(number) {
     let control = false;
     if (number % 2 == 0) {
